@@ -1,0 +1,12 @@
+@if (isButton()) {
+  <a
+    class="button"
+    [routerLink]="[path]"
+    [ngClass]="isPrimary() ? 'primary' : 'secondary'"
+    >{{ label() }}</a
+  >
+} @else {
+  <button class="button" [ngClass]="isPrimary() ? 'primary' : 'secondary'">
+    {{ label() }}
+  </button>
+}

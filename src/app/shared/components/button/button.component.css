@@ -1,0 +1,40 @@
+.button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: var(--primary-color);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.secondary {
+  background-color: white;
+  color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.outlined {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}

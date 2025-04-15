@@ -1,0 +1,25 @@
+<header class="header__container">
+  <div class="header__content">
+    <div class="logo">
+      <img
+        src="img/logo-diaz-servicios.svg"
+        alt="Diaz Servicios Logo"
+        [routerLink]="''"
+      />
+    </div>
+
+    <div class="header__nav">
+      @for (route of routes; track $index) {
+        <app-nav-items [route]="route" />
+      }
+    </div>
+
+    <div class="logo">
+      <img
+        src="img/logo-aca.svg"
+        alt="Automovil Club Argentino Logo"
+        [routerLink]="''"
+      />
+    </div>
+  </div>
+</header>

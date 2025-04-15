@@ -1,8 +1,34 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import {
+  ApplicationConfig,
+  provideExperimentalZonelessChangeDetection,
+  provideZoneChangeDetection,
+} from '@angular/core';
+import {
+  provideRouter,
+  withComponentInputBinding,
+  withViewTransitions,
+} from '@angular/router';
+
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
 
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes, withViewTransitions(), withComponentInputBinding()),
+    provideAnimationsAsync(),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+        options: {
+          prefix: 'my',
+          darkModeSelector: '.my-dark-mode',
+          lightModeSelector: '.light-mode',
+        },
+      },
+    }),
+  ],
 };
