@@ -1,0 +1,32 @@
+.card {
+  width: 200px;
+  height: 230px;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #ffff;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  gap: 1rem;
+}
+
+i {
+  font-size: 4rem;
+}
+
+.ti {
+  stroke: 1px;
+  font-weight: 100;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.description {
+  text-wrap: pretty;
+}

@@ -1,0 +1,17 @@
+<section class="services__container">
+  <app-title [title]="'Nuestros Servicios'" />
+
+  <article class="cards__services">
+    @for (card of servicesQuery.data(); track $index) {
+      <app-cards [card]="card" />
+    }
+  </article>
+
+  <div class="action__services">
+    <app-button
+      [label]="'Aprovechá tu descuento hoy'"
+      [isButton]="false"
+      [isPrimary]="true"
+    />
+  </div>
+</section>

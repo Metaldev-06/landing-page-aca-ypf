@@ -32,9 +32,10 @@
 }
 
 .hero__title {
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 6rem);
   text-align: center;
-  font-weight: 900;
+  font-weight: bold;
+  line-height: 1.1;
 }
 
 .hero__actions {

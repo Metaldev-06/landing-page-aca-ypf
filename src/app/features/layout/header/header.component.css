@@ -23,6 +23,7 @@
 
 .logo {
   width: 80px;
+  cursor: pointer;
 
   img {
     width: 100%;

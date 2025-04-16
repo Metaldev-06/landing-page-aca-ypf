@@ -8,8 +8,14 @@ import {
   withComponentInputBinding,
   withViewTransitions,
 } from '@angular/router';
-
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
+import {
+  provideTanStackQuery,
+  QueryClient,
+  withDevtools,
+} from '@tanstack/angular-query-experimental';
+
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 
@@ -20,6 +26,7 @@ export const appConfig: ApplicationConfig = {
     provideExperimentalZonelessChangeDetection(),
     provideRouter(routes, withViewTransitions(), withComponentInputBinding()),
     provideAnimationsAsync(),
+    provideTanStackQuery(new QueryClient(), withDevtools()),
     providePrimeNG({
       theme: {
         preset: Aura,

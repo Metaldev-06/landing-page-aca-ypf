@@ -4,4 +4,10 @@
 
 :root {
   --primary-color: #050b52;
+  --white-color: #f8fcff;
+  --contrast-color: #ecf4fd;
+}
+
+body {
+  background-color: var(--white-color);
 }
